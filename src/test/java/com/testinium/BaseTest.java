@@ -56,10 +56,13 @@ public class BaseTest {
             // 2. ENVIRONMENT_PARAMETER
             String denemeParam = System.getenv("environmentParameter");
 
-            // 2. COMMAND_PARAMETER
-            Properties demoParam2 = System.getProperties();
+            // 1. COMMAND_PARAMETER
+            String demoParam2 = System.getProperty("commandParameter2");
             // 2. ENVIRONMENT_PARAMETER
-            Map <String, String> denemeParam2 = System.getenv();
+            String denemeParam2 = System.getenv("environmentParameter2");
+
+            System.out.println(">>> [COMMAND_PARAMETER] demo: " + demoParam);
+            System.out.println(">>> [ENVIRONMENT_PARAMETER] deneme: " + denemeParam);
 
             System.out.println(">>> [COMMAND_PARAMETER] demo2: " + demoParam2);
             System.out.println(">>> [ENVIRONMENT_PARAMETER] deneme2: " + denemeParam2);
