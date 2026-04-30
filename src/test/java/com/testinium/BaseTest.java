@@ -4,6 +4,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
+
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -54,10 +56,10 @@ public class BaseTest {
             // 2. ENVIRONMENT_PARAMETER
             String denemeParam = System.getenv("environmentParameter");
 
-            // 1. COMMAND_PARAMETER
-            String demoParam2 = System.getProperty("commandParameter2");
+            // 2. COMMAND_PARAMETER
+            Properties demoParam2 = System.getProperties();
             // 2. ENVIRONMENT_PARAMETER
-            String denemeParam2 = System.getenv("environmentParameter2");
+            Map <String, String> denemeParam2 = System.getenv();
 
             System.out.println(">>> [COMMAND_PARAMETER] demo2: " + demoParam2);
             System.out.println(">>> [ENVIRONMENT_PARAMETER] deneme2: " + denemeParam2);
