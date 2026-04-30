@@ -48,6 +48,15 @@ public class BaseTest {
             browserName = System.getenv("browser");
             driver = new RemoteWebDriver(new URL("http://172.25.1.159:4444/wd/hub"), capabilities);
             actions = new Actions(driver);
+
+            // 1. COMMAND_PARAMETER
+            String demoParam = System.getProperty("commandParameter");
+            // 2. ENVIRONMENT_PARAMETER
+            String denemeParam = System.getenv("environmentParameter");
+
+            System.out.println(">>> [COMMAND_PARAMETER] demo: " + demoParam);
+            System.out.println(">>> [ENVIRONMENT_PARAMETER] deneme: " + denemeParam);
+
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
