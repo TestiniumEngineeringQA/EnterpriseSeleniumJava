@@ -69,6 +69,14 @@ public class BaseTest {
             System.out.println(">>> [COMMAND_PARAMETER] demo2: " + demoParam2);
             System.out.println(">>> [ENVIRONMENT_PARAMETER] deneme2: " + denemeParam2);
 
+            String scenarioIDValue = System.getenv("SCENARIO_ID");
+            String executionIDValue = System.getenv("EXECUTION_ID");
+            String testResultIDValue = System.getenv("TEST_RESULT_ID");
+
+            System.out.println(">>> [SCENARIO_ID] : " + scenarioIDValue);
+            System.out.println(">>> [EXECUTION_ID] : " + executionIDValue);
+            System.out.println(">>> [TEST_RESULT_ID] : " + testResultIDValue);
+
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
