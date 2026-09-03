@@ -73,9 +73,15 @@ public class BaseTest {
             String executionIDValue = System.getenv("EXECUTION_ID");
             String testResultIDValue = System.getenv("TEST_RESULT_ID");
 
+            String totalRetryCount = System.getenv("TOTAL_RETRY_COUNT");
+            String currentRetryCount = System.getenv("CURRENT_RETRY_COUNT");
+
             System.out.println(">>> [SCENARIO_ID] : " + scenarioIDValue);
             System.out.println(">>> [EXECUTION_ID] : " + executionIDValue);
             System.out.println(">>> [TEST_RESULT_ID] : " + testResultIDValue);
+
+            System.out.println(">>> [TOTAL_RETRY_COUNT] : " + totalRetryCount);
+            System.out.println(">>> [CURRENT_RETRY_COUNT] : " + currentRetryCount);
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
